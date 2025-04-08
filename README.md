@@ -9,7 +9,7 @@
 # Obsah:
 # API: Steam Web API (nebo simulace)
 # 
-# Ukládání: JSON nebo SQLite
+# Ukládání: JSON
 # 
 # OOP (Game, BacklogManager, StatsGenerator)
 # 
