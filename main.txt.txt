@@ -1,0 +1,39 @@
+class Game:
+    def __init__(self, game_name):
+        self.game_name = game_name
+    
+    def add_game(self):
+        # Add game to dictionary
+        game_list["game"] = game_name
+        # import do .json game_name ??
+        # zatim mi to akorat prepisuje value v key "game", coz by se melo vyresit tim, ze to hned po "Add game" naimportuju do .json ?? Snad ?? 
+        
+    def view_stats():
+        # Show data from game_list dictionary
+        # pozdeji by to melo importovat .json file primo do funkce ?? Asi? Viz. "add_game(self)" pozn.
+        print(game_list)
+
+
+# ________________________________________________________________________
+
+game_list = {}
+
+
+# Makes menu for better work with app
+while True:
+    print("1. Add game")
+    print("2. View stats")
+    print("3. Exit")
+
+    choice = input("Enter your choice:")
+
+    if choice == "1":
+        game_name = input("Add game:")
+        Game.add_game(game_name)
+    
+    elif choice == "2":
+        Game.view_stats()
+    
+    elif choice == "3":
+        print("Exiting")
+        break
