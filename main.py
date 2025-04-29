@@ -1,4 +1,5 @@
 from Game import Game
+import SteamAPI
 
 game_list = {}
 
@@ -11,7 +12,9 @@ while True:
     choice = input("Enter your choice:")
 
     if choice == "1":
-        game_name = input("Add game:")
+        SteamAPI.gname()
+        print(SteamAPI.glist)
+        game_name = input("You can choose or add new game:")
         # game_time = input("Add time:")
         game = Game("game_name")
         # time = Game("game_time")
