@@ -1,5 +1,3 @@
-import SteamAPI
-
 class Game:
 
     def __init__(self) -> None:
@@ -10,8 +8,14 @@ class Game:
         self.game_dict["Game"] = x
 
     def get_playtime(self) -> dict:
-        y = input("Add time:")
-        self.game_dict["Playtime"] = int(y)
+        while True:
+            y = input("Add time (in hours):")
+            try:
+                self.game_dict["Playtime"] = int(y)
+                break
+            except ValueError:
+                print("Please enter a number.")
+
         return self.game_dict
 
 
