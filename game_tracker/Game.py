@@ -1,17 +1,21 @@
+import SteamAPI
+
 class Game:
-    def __init__(self, game_name):
-        self.game_name = game_name
 
-    def add_game_to_json(self):
-        # Add game to dictionary
-        game_list["game"] = game_name
-        # import do .json game_name ??
-        # zatim mi to akorat prepisuje value v key "game", coz by se melo vyresit tim, ze to hned po "Add game" naimportuju do .json ?? Snad ??
+    def __init__(self) -> None:
+        self.game_dict = {}
 
-    def view_stats():
-        # Show data from game_list dictionary
-        # pozdeji by to melo importovat .json file primo do funkce ?? Asi? Viz. "add_game(self)" pozn.
-        print(game_list)
+    def get_game_title(self) -> None:
+        x = input("You can choose or add new game:")
+        self.game_dict["Game"] = x
+
+    def get_playtime(self) -> dict:
+        y = input("Add time:")
+        self.game_dict["Playtime"] = int(y)
+        return self.game_dict
+
+
+
 
 
 # _______________________________________________________________________________________ #
