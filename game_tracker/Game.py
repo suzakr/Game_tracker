@@ -20,8 +20,6 @@ class Game:
 
 
 
-
-
 # _______________________________________________________________________________________ #
         # def add_game_time_to_json(self):
         #     # Adds time for game (for example of using of try/excuse function)
