@@ -10,7 +10,7 @@ class Game:
 
     def add_playtime(self) -> dict:
         while True:
-            y = input("Add time (in hours):")
+            y = input("Add time (in minutes):")
             try:
                 self.game_dict["Playtime"] = int(y)
                 break
