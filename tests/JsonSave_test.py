@@ -12,9 +12,11 @@ class TestSaveManager(unittest.TestCase):
         self.filename = self.temp_file.name
         self.temp_file.close()
         self.manager = SaveManager(self.filename)
+            # Vytvori docasny soubor, kde se budou ukladat testovaci data
 
     def tearDown(self):
         os.remove(self.filename)
+            # Po testu odstrani docasny soubor
 
     def test_save_and_update_game_in_json(self):
         initial_data = [{"Game": "Mafia 1", "Playtime": 200}]
@@ -29,6 +31,8 @@ class TestSaveManager(unittest.TestCase):
         self.assertEqual(len(result), 1)
         self.assertEqual(result[0]["Game"], "Mafia 1")
         self.assertEqual(result[0]["Playtime"], 1000)
+            # Testuje, zda program spravne ulozi data do json souboru
+            # Testuje, zda data, ktera jsou ukladana pod stejnym "Game", jsou aktualizovana nikoli duplikovana
 
     def test_add_multiple_and_nested_data_to_json(self):
         nested_data = [
@@ -45,3 +49,4 @@ class TestSaveManager(unittest.TestCase):
         self.assertEqual(len(games), 2)
         self.assertEqual(games["Fallout 4"], 300)
         self.assertEqual(games["Stalker"], 500)
+            # Testuje, zda jsou data, at uz se v seznamu nachazi v jakemkoli stupni zanoreni, spravne ulozena do json souboru
