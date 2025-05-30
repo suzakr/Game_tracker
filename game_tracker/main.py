@@ -1,13 +1,15 @@
 import game_tracker.SteamAPI
 import game_tracker.Game
+import game_tracker.JsonSave
 
 game_list = []
-# Makes menu for better work with app
+
 while True:
     print("1. Add game")
     print("2. View stats")
     print("3. Save list")
-    print("4. Exit")
+    print("4. Remove all games from file")
+    print("5. Exit")
 
     choice = input("Enter your choice:")
 
@@ -39,9 +41,14 @@ while True:
         print(game_list)
 
     elif choice == "3":
-        ...
+        save_manager = game_tracker.JsonSave.SaveManager("games.json")
+        save_manager.save(game_list)
+        game_list.clear()
 
     elif choice == "4":
+        game_tracker.JsonSave.remove_json_content()
+
+    elif choice == "5":
         print("Exiting")
         break
 

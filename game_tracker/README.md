@@ -1,16 +1,14 @@
-# Tracker odehraného času / herního backlogu
+# Tracker odehraného času
 # Co dělá:
 # Uživatel si přidává hry.
 # 
-# Zaznamenává herní čas (přes API Steam)
-# 
-# Statistiky: kolik času strávil v jaké hře, které má rozehrané.
+# Zapíše herní čas přes API Steam nebo ručně
 # 
 # Obsah:
 # API: Steam Web API
 # 
 # Ukládání: JSON, dictionary
 # 
-# OOP (Game, SteamAPI, GameScanner)
+# OOP (Game, JsonSave)
 # 
 # Testy: unit testy
